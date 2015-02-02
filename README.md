@@ -17,6 +17,7 @@
 <li>Clone the website repo.</li>
 <li>Go Inside the cloned folder</li>
 <li>Do npm install</li>
+<li>Do grunt bower</li>
 <li>Do grunt dev</li>
 </ul>
 <h3> Hit localhost:3000</h3>
