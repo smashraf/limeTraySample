@@ -1,0 +1,143 @@
+.snapshot {
+	@include span-columns(8);
+
+	&__wrap {
+		@include outer-container();
+		padding-top: 60px;
+		padding-bottom: 80px;
+	}
+
+	&__viewer {
+		height: 260px;
+		display: block;
+		position: relative;
+		background-color: #eaeaea;
+		overflow: hidden;
+	}
+
+	&__reel {
+		@include transition(transform 0.2s ease-in);
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 400%;
+
+		&.is-showing-1 {
+			@include transform(translate3d(0,0,0));
+		}
+		&.is-showing-2 {
+			@include transform(translate3d(-25%,0,0));
+		}
+		&.is-showing-3 {
+			@include transform(translate3d(-50%,0,0));
+		}
+		&.is-showing-4 {
+			@include transform(translate3d(-75%,0,0));
+		}
+	}
+
+	&__img {
+		width: 25%;
+		height: 100%;
+		display: inline-block;
+		float: left;
+		background-size: cover;
+
+		&--first {
+			background-color: red;
+			background-image: url('../images/snapshot-1.jpg');
+		}
+		&--second {
+			background-color: blue;
+			background-image: url('../images/snapshot-2.jpg');
+		}
+		&--third {
+			background-color: green;
+			background-image: url('../images/snapshot-1.jpg');
+		}
+		&--fourth {
+			background-color: yellow;
+			background-image: url('../images/snapshot-2.jpg');
+		}
+	}
+
+	&__overlay {
+		// @include overlay();
+	}
+
+	&__arrow {
+		@include transition(opacity 0.2s ease-in);
+		position: absolute;
+		top: 50%;
+		margin-top: -20px; // <-- to center in vertically
+		background: rgba(0,0,0,1);
+		opacity: 0.2;
+		padding: 10px 5px;
+		color: white;
+		z-index: z('beta');
+
+			&--left {
+				left: 0;
+				padding-left: 3px;
+			}
+			&--right {
+				right: 0;
+				padding-right: 3px;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+	}
+
+	&__name {
+		@include font-smoothing();
+		font-size: 18px;
+		font-weight: bold;
+		display: inline-block;
+		margin-top: 30px;
+	}
+
+	&__location {
+		@include font-smoothing();
+		font-size: 13px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: c('neutral', 'para-light');
+		margin-left: 5px;
+		letter-spacing: 1px;
+	}
+
+	&__description {
+		font-size: 15px;
+		line-height: 24px;
+		margin-top: 0;
+	}
+}
+
+
+
+.section-heading {
+	display: block;
+	text-align: center;
+	padding-bottom: 50px;
+
+	&__title {
+		@include font-smoothing();
+		font-size: 24px;
+		line-height: 36px;
+		margin-bottom: 6px;
+
+		&--white {
+			color: #fff;
+		}
+	}
+
+	&__border {
+		height: 2px;
+		width: 40px;
+		background-color: c('accent', 'primary');
+		display: inline-block;
+	}
+}

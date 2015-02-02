@@ -1,0 +1,11 @@
+{
+  "name": "LimeTray Sample",
+  "version": "1.0.0",
+  "devDependencies": {},
+  "dependencies": {
+    "bourbon": "~4.1.1",
+    "neat": "~1.7.1",
+    "normalize-scss": "~3.0.2",
+    "datepicker-fr": "~1.11.2"
+  }
+}

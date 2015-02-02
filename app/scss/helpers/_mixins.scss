@@ -1,0 +1,102 @@
+/**
+ * Applies an overlay on the div on which it is applied.
+ * The parent div should have a class of 'relative'
+ * applied on it
+ */
+@mixin overlay() {
+	@include linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.6) 100%);
+	z-index: z('gradient-overlay');
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+
+/**
+ * Centers the div both horizontally and vertically
+ * within it's parent div. The parent div should
+ * have a class of 'relative' on it
+ */
+@mixin centerer() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/**
+ * Applies font smoothing and antiliasing
+ * to text.
+ */
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+/**
+ * Applies a 1px shadow to whichever type it is applied
+ * to. This can be modified with arguments later
+ * if reqired
+ */
+@mixin text-shadow() {
+	text-shadow: 0 1px 1px rgba(0,0,0,0.8);
+}
+
+
+/**
+ * This helps style the placeholder texts within
+ * form fields. To be used within a form
+ * selector
+ */
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+
+/**
+ * Media Object Mixin. The media object is when an image floats to the
+ * left and the body to the right. This is very useful and can be
+ * used at varius places.
+ *
+ * @info - http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+ *
+ * @expected html structure:-
+ *    <div class="media">
+ *       <img class="media-img" src="..">
+ *       <div class="media-body" src=".."
+ *    </div>
+ *
+ * @usage:-
+ *    .media {
+ *       @include media-object('.media-img', '.media-body')
+ *    }
+ * @param  $img  The class of the media image
+ * @param  $body The class of the media body
+ * @param  $margin Distance between the image and the body [optional]
+ */
+@mixin media-object($img, $body, $margin:10px) {
+  @include clearfix;
+  #{unquote($body)} {
+    display:table-cell;
+    width:10000px;
+    *width:auto;
+    *zoom:1;
+  }
+  #{unquote($img)} {
+    float: left;
+    display:block;
+    margin-right:$margin;
+  }
+}

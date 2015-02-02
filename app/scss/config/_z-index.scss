@@ -1,0 +1,14 @@
+/**
+ * A predfined map of named z-index values to be used along
+ * with the z() funtion. Ths ensures that all z-index
+ * used in the site dont go haywire
+ *
+ * Example usage:- z-index: z('modal-overlay');
+ */
+$z-layers: (
+  "modal-content": 4,
+  "modal-overlay": 3,
+  "gradient-content": 2,
+  "gradient-overlay": 1,
+  "beta": 2
+);

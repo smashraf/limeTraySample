@@ -1,0 +1,33 @@
+/**
+ * Returns a color from the global color
+ * map
+ *
+ * @param string $palette  - The pallete to chose from
+ * @param string $tone - The tone to chose from pallete
+ *
+ * @return HEX
+ */
+ 
+@function c($palette, $tone) {
+  @if not map-has-key($colors, $palette) {
+    @error "No palette found for `#{$palette}` in $colors map. Please check if it exists.";
+  }
+  @else if not map-has-key(map-get($colors, $palette), $tone)  {
+    @error "No color by the name of `#{$tone}` exists in the `#{$palette}` pallete in the $colors map.";
+  }
+  @return map-get(map-get($colors, $palette), $tone);
+}
+
+/**
+ * Retuns a value of z-index from a previously
+ * defined scale
+ *
+ * @param  $layer - Layer Name as described in $z-layers in config
+ * @return int - The value of the z-index property
+ */
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+  @return map-get($z-layers, $layer);
+}

@@ -1,0 +1,92 @@
+.guestselect {
+	position: absolute;
+	right:15px;
+	&__icon {
+		position: absolute;
+		color: c('accent', 'primary');
+		display: inline-block;
+		line-height: 48px; // <-- Magic Number - should be 45px but 48px aligns the icon to the center
+	}
+	&__input {
+		padding-left: 23px;
+		width: 60%;
+	}
+	&__box{
+		display:inline-block;
+		padding-left: 23px;
+		width: 50%;	
+	}
+
+	&__button {
+		color: black;
+		background-color: #E9E9E9;
+		outline: 0;
+		border: 0;
+		height: 48px;
+		width: 48px;
+	}
+	p {
+		color: #fff;
+	}
+
+	&__byline {
+		display: inline-block;
+	}
+
+	&__dropdown {
+	  border-bottom: 1px dashed #999;
+	  display: inline;
+	  &__border{
+		border:1px solid #F3F3F3;
+		border-radius:3px;
+		overflow:hidden;
+	}
+	}
+
+	&__dropdown-menu {
+		@include transition (all 0.2s ease-in-out);
+		margin: 0;
+		padding: 0;
+		width: 240px;
+		position: absolute;
+		background-color: #fff;
+		z-index: z('gradient-content');
+		box-shadow: 0 2px 2px transparentize(black, 0.8);
+		top: 20px;
+		right: -40px;
+		display: none;
+		border-radius: 3px;
+
+    &:before {
+      @include position(absolute, 0 1em 0 0);
+      color: #fff;
+      content: "\25b2";
+      font-size: 1.4em;
+      pointer-events: none;
+      text-shadow: 0 -2px 2px transparentize(black, 0.7);
+      top: -0.7em;
+      left: 110px;
+    }
+
+		&.is-showing {
+			display: inline-block;
+		}
+
+		li {
+			list-style-type: none;
+			color: black;
+			border-bottom: solid 1px c('neutral', 'border');
+			padding: 8px;
+			cursor: pointer;
+
+			&:hover {
+				background-color: c('neutral', 'bg-highlight');
+			}
+
+			&:last-child {
+				border-radius: 3px;
+			}
+		}
+	}
+}
+

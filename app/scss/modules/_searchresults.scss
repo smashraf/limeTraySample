@@ -1,0 +1,159 @@
+.searchResults{
+	@include outer-container();
+	@include pad(30px 0px);
+	&__sortby{
+	width:25%;
+	float:right;
+	@include pad(16px 0px);
+	text-align:right;
+		&__heading{
+			display:inline;
+			color: c('neutral', 'para-light');
+		}
+	}
+	&__sorter {
+		margin:0;
+		padding:0;
+		display:inline;
+		
+		li{
+			list-style:none;
+			padding:3px 3px;
+			display:inline-block;
+			color: c('neutral', 'para-light');
+			}
+		&--selected{
+			border-bottom: 2px solid c("accent","primary");
+			color: c('neutral','para-dark') !important;
+
+		}
+	}
+	&__topText{
+		width:74%;
+		float:left;
+	}
+	&__wrapper{
+		@include span-columns(16);
+		min-height:200px;
+	}
+	&__filters{
+		@include span-columns(4);
+	}
+	&__results{
+		@include span-columns(12);
+	}
+	&__item{
+			list-style:none;
+			@include span-columns(6 of 12);
+			@include omega(2n);
+			margin-bottom: 15px;
+			border-radius:3px;
+			overflow:hidden;
+			border:thin solid #DDD;
+		}
+	&__hotelDetails{
+		@include pad(10px);
+		color: c('neutral', 'para-dark');
+		.icon-location{
+		line-height: 15px;
+		color:#EFEFEF;
+		}	
+	}
+	&__hotelBookBox{
+		@include pad(25px 10px);
+		background: c("neutral","bg-highlight");
+		p{
+			width:70%;
+			float:left;
+			margin:0;
+			margin-top:-5px;
+		}
+		button{
+			width:30%;
+			float:right;
+			background: c("accent","primary");
+			color: #FFF;
+			font-weight: bold;
+			border-radius: 4px;
+			border:none;
+			padding: 5px 8px;
+			margin:-10px auto 5px auto;
+		}
+
+
+	}
+	&__deluxeStar{
+		@include triangle(50px 50px, #8f13ff, up-right);
+		float:right;
+		position:relative;
+		z-index:1;
+		top:-200px;
+	}
+	&__filtersGroup{
+		@include pad(10px);
+		color: c('neutral', 'para-dark');
+		hr{
+		margin: 40px auto 0 auto;
+		border-bottom:thin solid c('neutral', 'border');
+		}
+		h5{
+		margin:15px 0;
+		}
+		ul{
+		margin:0;
+		padding:0;
+		li{
+			list-style:none;
+			padding:5px;
+			padding-left:35px;
+			cursor:pointer;		
+		}
+		li:hover {
+			.searchResults__radio{
+				box-shadow: 0px 0px 1px #47A25D, 0px 0px 1px #47A25D inset;
+				}
+			.searchResults__checkbox{
+				border-color:#47A25D;
+				border: 1px solid #DDD;
+				.icon-check{
+				color: c("neutral","border");
+				}
+
+				}
+			}
+		}
+	}
+	&__radio{
+		width:14px;
+		height:14px;
+		float:left;
+		margin-left:-25px;
+		margin-top:2px;
+		background-color: #FFF;
+		border: 4px solid #FFF;
+		border-radius: 20px;
+		box-shadow: 0px 0px 1px #000, 0px 0px 1px #000 inset;
+	}
+	&--radioSelected{
+		border-color:#47A25D;
+		box-shadow: none;
+	}
+	&__checkbox{
+		width:14px;
+		height:14px;
+		float:left;
+		margin-left:-25px;
+		margin-top:2px;
+		background-color: #FFF;
+		border: 1px solid #DDD;
+		.icon-check{
+			position:absolute;
+			color:white;
+			font-size:12px;
+		}
+	}
+	&--checkboxSelected{
+	background-color:#47A25D;
+	
+	}
+}

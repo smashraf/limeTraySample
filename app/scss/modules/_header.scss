@@ -1,0 +1,55 @@
+$header-height: 50px;
+.header {
+	background-color: c('accent', 'primary');
+	border-bottom: solid 1px #B8231F; // <-- change to bgc
+	height: $header-height;
+	&__container {
+		@include clearfix();
+		width: 98%;
+		margin: auto;
+	}
+
+	&__logo {
+		@include hide-text;
+		float: left;
+		width: 83px;
+		height: 31px;
+		margin: 0;
+		margin-top: 9px;
+  		background-image: url(../images/logo.png);
+		background-repeat: no-repeat;
+	}
+
+	&__byline {
+		float: left;
+		margin-left: 12px;
+		color: #fff;
+	}
+
+	&__phone {
+		float: right;
+	}
+}
+
+
+.phone {
+	@include clearfix();
+
+	&__number {
+		float: right;
+		margin: 0;
+		color: #fff;
+		letter-spacing: 1px;
+		line-height: $header-height;
+	}
+
+	&__icon {
+		float: right;
+		display: inline-block;
+		height: $header-height;
+		padding-top: 16px;
+		color: #fff;
+		font-size: 20px;
+		margin-right: 3px;
+	}
+}

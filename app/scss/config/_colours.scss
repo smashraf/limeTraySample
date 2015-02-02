@@ -1,0 +1,35 @@
+/**
+ * A predfined map of named colour values to be used along
+ * with the c() funtion. This ensures we don't end up
+ * using random colour codes.
+ *
+ * The map is divided into 2 submaps, for ease of
+ * rememberance
+ *
+ * Example usage:- color: c('accent', 'primary');
+ * Example usage:- backgroundcolor: c('neutral', 'light');
+ */
+
+$bg-dark: #2A2D2E;
+$bg-highlight: #FAFAFA;
+$para-grey: #555A5C;
+$para-light: #A6A6A6;
+$heading-grey: #484846;
+$para-on-dark: #707070;
+$border-grey: #EBEBEB;
+$ruby-red: #EF3E3A;
+
+$colors: (
+  neutral: (
+  	bg-dark: $bg-dark,
+  	bg-highlight: $bg-highlight,
+    border: $border-grey,
+    para: $para-grey,
+    para-light: $para-light,
+    para-dark: $para-on-dark,
+    heading: $heading-grey
+  ),
+  accent: (
+    primary: $ruby-red,
+  )
+)

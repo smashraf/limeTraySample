@@ -1,0 +1,32 @@
+* {
+	box-sizing: border-box;
+	font-family: "Proxima Nova", sans-serif;
+}
+
+//--------------------------------------------------
+// Typography
+//--------------------------------------------------
+p, ul, li, span {
+	color: c('neutral', 'para');
+}
+
+h1, h2, h3, h4, h5, h6 {
+ color: c('neutral', 'heading');
+}
+
+//--------------------------------------------------
+// Forms
+//--------------------------------------------------
+
+#{$all-text-inputs} {
+	border-radius: 3px;
+  border: 0;
+  outline: 0;
+  height: 45px;
+  font-size: 14px;
+  color: #2d2d2d;
+
+  @include placeholder {
+		@include font-smoothing();
+  }
+}

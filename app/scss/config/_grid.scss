@@ -1,0 +1,14 @@
+// Change to false for production
+$visual-grid: true;
+$visual-grid-color: #EEE;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.4;
+
+/**
+ * The grid configuration used by Neat to create
+ * the layout
+ */
+$column: 45px;
+$gutter: 26px;
+$max-width: 1140px; // <-- neat uses em's - Thus converting 1140px to em
+$grid-columns: 16;

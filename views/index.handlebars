@@ -1,0 +1,312 @@
+{{> header}}
+<div class="hero">
+	<div class="hero__overlay"></div>
+	<div class="hero__content">
+		<h1 class="hero__byline">Standardized Budget Rooms starting at &#8377; 999</h1>
+		<h2 class="hero__byline--small">with free wifi and breakfast</h2>
+		<div class="cityselect">
+		  <p class="cityselect__byline">Search for hotels in</p>
+		  <p class="cityselect__dropdown" id="js-cityselect">Delhi</p>
+		  <ul class="cityselect__dropdown-menu" id="js-citydropdown">
+		    <li>Bangalore</li>
+		    <li>Mumbai</li>
+		    <li>Chennai</li>
+		    <li>Kolkata</li>
+		  </ul>
+		</div>
+		{{!-- end cityselect --}}
+		<div class="hero__searchbar searchbar">
+			<form action="/search" method="POST">
+			  <fieldset class="searchbar__container">
+			  	<div class="searchbar__fieldwrap searchbar__fieldwrap--location">
+			  		<i class="icon-location searchbar__icon"></i>
+			  		<input class="searchbar__input searchbar__input-js" type="text" placeholder="Enter Locality (E.g:- Hauz Khas, Koramangala)">
+			  		<div class="searchbar__searchresults searchbar__searchresults-js hide">
+						</div>
+			  	</div>
+			  	<div class="searchbar__fieldwrap">
+			  		<i class="icon-calendar searchbar__icon"></i>
+			  		<input class="searchbar__input datepicker searchbar__checkin-js" type="text" placeholder="Check-in date">
+			  	</div>
+
+			  	<div class="searchbar__fieldwrap">
+			  		<i class="icon-calendar searchbar__icon"></i>
+			  		<input class="searchbar__input searchbar__checkout-js" type="text" placeholder="Check-out date">
+			  	</div>
+			  	<div class="searchbar__fieldwrap">
+			  		<i class="icon-user-room searchbar__icon"></i>
+			  		{{!-- <input id = "searchbar__guestselect-js" class="searchbar__input" type="text" placeholder="2 Guests & 1 Room" value="2 Guests & 1 Room" > --}}
+			  		<div id = "searchbar__guestselect-js" class="searchbar__guestbox">2 Guests & 1 Room</div>
+			  		<div id="guestselect-js" class="guestselect">
+			  			<div class="guestselect__dropdown">
+				  				<ul class="guestselect__dropdown-menu">
+							    <li>
+							    	<div class="guestselect__dropdown__border">
+							    	<i class="icon-calendar guestselect__icon"></i>
+			  						{{!-- <input id="js-guestselect__input--guests" class="guestselect__input" type="text" placeholder="No. of Guests"> --}}
+			  						<div id="js-guestselect__input--guests" class="guestselect__box">2</div>
+			  						<button class="icon-minus guestselect__button js-minus js-guestbutton"></button>
+			  						<button class="icon-plus guestselect__button js-plus js-guestbutton"></button>
+			  						</div>
+							    </li>
+							    <li>
+							    	<div class="guestselect__dropdown__border">
+							    	<i class="icon-calendar guestselect__icon"></i>
+			  						<div id="js-guestselect__input--rooms" class="guestselect__box">1</div>
+			  						<button class="icon-minus guestselect__button js-minus js-roombutton"></button>
+			  						<button class="icon-plus guestselect__button js-plus js-roombutton"></button>
+			  						</div>
+							    </li>
+			  					</ul>
+			  			</div>
+			  		</div>
+			  	</div>
+
+			  	<div class="searchbar__fieldwrap searchbar__fieldwrap--search">
+			  		<input class="searchbar__button" type="submit" value="Search">
+			  	</div>
+			  </fieldset>
+			</form>
+		</div>
+		{{!-- end searchbar --}}
+
+	</div>
+	{{!-- end hero__content --}}
+</div>
+{{!-- end hero --}}
+
+<section class="amenities__section">
+	<div class="amenities__wrap">
+			<div class = "amenities__imagescontainer amenities__imagescontainer--first">
+			<img src="http://lorempixel.com/240/240/" alt="" class="amenities__imagescontainer--img">
+			<p>Hygenic Washrooms</p>
+			</div>
+			<div class = "amenities__imagescontainer">
+			<img src="http://lorempixel.com/240/240/" alt="" class="amenities__imagescontainer--img">
+			<p>Hygenic Washrooms</p>
+			</div>
+			<div class = "amenities__imagescontainer">
+			<img src="http://lorempixel.com/240/240/" alt="" class="amenities__imagescontainer--img">
+			<p>Hygenic Washrooms</p>
+			</div>
+			<div class = "amenities__imagescontainer amenities__imagescontainer--last">
+			<img src="http://lorempixel.com/240/240/" alt="" class="amenities__imagescontainer--img">
+			<p>Hygenic Washrooms</p>
+			</div>
+	</div>
+</section>
+
+<section class="snapshot__section">
+	<div class="snapshot__wrap">
+
+		<div class="snapshot__heading section-heading">
+			<h2 class="section-heading__title">Our Most Loved OYOs</h2>
+			<span class="section-heading__border"></span>
+		</div>
+
+		<div class="snapshot">
+			<div class="snapshot__viewer">
+				<span class="snapshot__arrow snapshot__arrow--left"><i class="icon-left-arrow"></i></span>
+				<span class="snapshot__arrow snapshot__arrow--right"><i class="icon-right-arrow"></i></span>
+				<div class="snapshot__reel is-showing-1">
+					<div class="snapshot__img snapshot__img--first">
+							<div class="snapshot__overlay"></div>
+					</div>
+					<div class="snapshot__img snapshot__img--second">
+							<div class="snapshot__overlay"></div>
+					</div>
+					<div class="snapshot__img snapshot__img--third">
+							<div class="snapshot__overlay"></div>
+					</div>
+					<div class="snapshot__img snapshot__img--fourth">
+							<div class="snapshot__overlay"></div>
+					</div>
+				</div>
+			</div>
+			<div class="snapshot__text">
+				<h3 class="snapshot__name">OYO Huda City Center</h3>
+				<span class="snapshot__location">Guragaon</span>
+				<p class="snapshot__description">
+					OYO Rooms Cyber Park Premium is a 21 room property with a combination of suites and deluxe rooms. This is a beautiful property with amazing facilities like a conference room, a banquet hall, a restaurant and a coffee shop along with free parking and 24 hour power backup.
+				</p>
+			</div>
+		</div>
+
+
+		<div class="snapshot">
+			<div class="snapshot__viewer">
+				<span class="snapshot__arrow snapshot__arrow--left"><i class="icon-left-arrow"></i></span>
+				<span class="snapshot__arrow snapshot__arrow--right"><i class="icon-right-arrow"></i></span>
+				<div class="snapshot__reel is-showing-1">
+					<div class="snapshot__img snapshot__img--first">
+							<div class="snapshot__overlay"></div>
+					</div>
+					<div class="snapshot__img snapshot__img--second">
+							<div class="snapshot__overlay"></div>
+					</div>
+					<div class="snapshot__img snapshot__img--third">
+							<div class="snapshot__overlay"></div>
+					</div>
+					<div class="snapshot__img snapshot__img--fourth">
+							<div class="snapshot__overlay"></div>
+					</div>
+				</div>
+			</div>
+			<div class="snapshot__text">
+				<h3 class="snapshot__name">OYO Huda City Center</h3>
+				<span class="snapshot__location">Guragaon</span>
+				<p class="snapshot__description">
+					OYO Rooms Cyber Park Premium is a 21 room property with a combination of suites and deluxe rooms. This is a beautiful property with amazing facilities like a conference room, a banquet hall, a restaurant and a coffee shop along with free parking and 24 hour power backup.
+				</p>
+			</div>
+		</div>
+
+	</div>
+	{{!-- end snapshot__wrap --}}
+</section>
+{{!-- end snapshot__section --}}
+{{!-- {{> snapshot}} --}}
+
+
+
+<section class="collection">
+	<div class="collection__wrap">
+
+		<div class="collection__heading section-heading">
+			<h2 class="section-heading__title section-heading__title--white">An OYO for all your needs</h2>
+			<span class="section-heading__border"></span>
+		</div>
+
+		<div class="collection__cont">
+			<div class="collection__tile tile tile--first">
+				<div class="tile__overlay"></div>
+				<div class="tile__content">
+					<div class="tile__content-wrap">
+						<h3 class="tile__heading">OYOs for Marriage</h3>
+						<p class="tile__description">
+							Lorem ipsum hahla lorem pakum buka Lorem ipsum hahla lorem pakum buka Lorem ipsum hahla lorem pakum buka
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="collection__cont">
+			<div class="collection__tile tile--half tile--second">
+				<div class="tile__overlay"></div>
+				<div class="tile__content tile__content--half">
+					<div class="tile__content-wrap tile__content-wrap--half">
+						<h3 class="tile__heading">OYOs for Vacation</h3>
+						<p class="tile__description">
+							Lorem ipsum hahla lorem pakum buka Lorem ipsum hahla lorem pakum buka Lorem ipsum hahla lorem pakum buka
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="collection__tile tile--half tile--third">
+				<div class="tile__overlay"></div>
+				<div class="tile__content tile__content--half">
+					<div class="tile__content-wrap tile__content-wrap--half">
+						<h3 class="tile__heading">OYOs for Corporate</h3>
+						<p class="tile__description">
+							Lorem ipsum hahla lorem pakum buka Lorem ipsum hahla lorem pakum buka Lorem ipsum hahla lorem pakum buka
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	{{!-- collections__wrap --}}
+</section>
+{{!-- collections --}}
+
+
+<section class="testimonials">
+	<div class="testimonials__wrap">
+
+		<div class="testimonials__heading section-heading">
+			<h2 class="section-heading__title">What People Are Saying</h2>
+			<span class="section-heading__border"></span>
+		</div>
+
+		<ul class="testimonials__tiles">
+			<li class="testimonials__tile testimonial">
+			  <img class="testimonial__img" src="images/test-2.jpg"/>
+			  <div class="testimonial__body">
+			  	<p class="testimonial__content">
+			  		This is the fifth time I have stayed in this property and I must say that it is a great option for all those here on a business trip. I recommend it to everyone planning a trip anytime soon.
+			  	</p>
+			  	<p class="testimonial__cite">Kaushik Mane - <span>Gurgaon</span></p>
+			  </div>
+			</li>
+
+			<li class="testimonials__tile testimonial">
+				  <img class="testimonial__img" src="images/test-1.jpg"/>
+				  <div class="testimonial__body">
+				  	<p class="testimonial__content">
+				  		This was a great hotel and I would stay here again without hesitation. The room was clean and comfortable and there was a good choice on offer for breakfast.
+				  	</p>
+				  	<p class="testimonial__cite">Rahul Tanreja - <span>Bangalore</span></p>
+				  </div>
+			</li>
+
+			<li class="testimonials__tile testimonial">
+				  <img class="testimonial__img" src="images/test-3.jpg"/>
+				  <div class="testimonial__body">
+				  	<p class="testimonial__content">
+				  		The hotel was excellent and we were fortunate to get upgraded to a larger room. Highly recommended and we enjoyed our stay. Also this place has nice breakfasts.
+				  	</p>
+				  	<p class="testimonial__cite">Bella Andren - <span>Chicago</span></p>
+				  </div>
+			</li>
+
+			<li class="testimonials__tile testimonial">
+				  <img class="testimonial__img" src="images/test-4.jpg"/>
+				  <div class="testimonial__body">
+				  	<p class="testimonial__content">
+				  		This was a great hotel and I would stay here again without hesitation. The room was clean and comfortable and there was a good choice on offer for breakfast.
+				  	</p>
+				  	<p class="testimonial__cite">Sahil Khurana - <span>Kolkata</span></p>
+				  </div>
+			</li>
+		</ul>
+		{{!-- end testimonial__tiles --}}
+
+	</div>
+	{{!-- end testimonials__wrap --}}
+
+</section>
+{{!-- end testimonials --}}
+
+
+<div class="media">
+	<div class="media__wrap">
+
+		<div class="media__tile">
+			<img src="images/business-insider.jpg" alt="Business Insider" class="media__image">
+			<p class="media__snippet">
+				“Revolutionizing accomodations in emerging economies”
+			</p>
+		</div>
+
+		<div class="media__tile media__tile--economic">
+			<img src="images/economic-times.jpg" alt="The Economic Times" class="media__image">
+			<p class="media__snippet">
+				“Providing tech enabled inns and affordable hotel alternatives”
+			</p>
+		</div>
+
+		<div class="media__tile media__tile--khosla">
+			<img src="images/khosla-impact.jpg" alt="Khosla Impact" class="media__image">
+			<p class="media__snippet">
+				“Dreams of making standardized, affordable accomodations available to everyone”
+			</p>
+		</div>
+	</div>
+	{{!-- end media__wrap --}}
+</div>
+{{!-- end media --}}
+
+{{> footer}}
